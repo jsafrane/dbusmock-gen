@@ -19,7 +19,6 @@
 
 import dbusmock
 import subprocess
-import time
 import unittest
 import sys
 import os
@@ -139,8 +138,7 @@ class TestUDisks(dbusmock.DBusTestCase):
 
         # spawn d-feet with the right DBus
         print "DBUS_SYSTEM_BUS_ADDRESS=" + os.environ['DBUS_SYSTEM_BUS_ADDRESS']
-        subprocess.call("d-feet &", shell=True)
-        time.sleep(100000)
+        subprocess.call("d-feet")
 
 if __name__ == '__main__':
     unittest.main(testRunner=unittest.TextTestRunner(stream=sys.stdout, verbosity=2))
