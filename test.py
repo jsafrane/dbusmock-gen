@@ -19,15 +19,11 @@
 
 import dbusmock
 import subprocess
-import dbus
 import time
 import unittest
 import sys
 import os
-import subprocess
 import dbus.mainloop.glib
-import gobject
-import thread
 
 dbus.mainloop.glib.DBusGMainLoop(set_as_default=True)
 
